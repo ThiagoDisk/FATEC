@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adote um animal</title>
+	
+    
+	<script src="js/jquery.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+
+			$("#busca").click(function() {
+
+				var especie = $('#especie').val();	
+				var nome = $('#nome').val();	
+				var idade = $('#idade').val();	
+				var cor = $('#cor').val();	
+				var raca = $('#raca').val();	
+				var sexo = $('#sexo').val();
+				$("#dadosAnimal").empty();
+					
+				var url = "/animal/buscaAnimal/"+especie+"/"+nome+"/"+idade+"/"+cor+"/"+raca+"/"+sexo+"";
+			
+					
+
+				$.getJSON(url, function(data) {
+						
+						var itens = [];
+						
+						$.each(data, function(i){
+						
+							itens.push("<tr> <td>"+ data.especie +"</td><td>"+ data.espc.nome + "</td><td>"+ data.espc.idade + "</td><td>"+ data.espc.cor + "</td><td>"+ data.espc.raca + "</td><td>"+ data.espc.sexo + "</td><td>"+ data.descricao +"</td></tr>");
+							
+						});
+									
+						$("#dadosAnimal").append(itens);
+						
+				});
+
+			});
+
+		});
+
+	</script>
+
+   
+  </head>
+
+
+  <body>
+
+
+  		<div  id="painelBusca">
+            
+			<div class="form-group col-md-2">
+         		 <label>Especies</label>
+				<input id="especie" class="input-large form-control" type="text" placeholder="Digite a especie">
+         	</div>
+         
+         	<div class="form-group col-md-2">
+               <label>Nome</label>
+       		 <input id="nome" class="input-large form-control" type="text" placeholder="Digite o nome">
+      		</div>
+      		
+      		<div class="form-group col-md-2">
+      	  		 <label>Idade</label>
+      		  <input id="idade" class="input-large form-control" type="text" placeholder="Digite a idade">
+       		</div>
+       		
+       		<div class="form-group col-md-2">
+      	  		 <label>Cor</label>
+       		 	<input id="cor" class="input-large form-control" type="text" placeholder="Digite a cor">
+       		</div>
+       		 
+       		 <div class="form-group col-md-2">
+      	  		 <label>Raça</label>
+       		 <input id="raca" class="input-large form-control" type="text" placeholder="Digite a raça">
+       		 </div>
+       		 
+       		 <div class="form-group col-md-2">
+       			 <label>Sexo</label>
+       			 <input id="sexo" class="input-large form-control" type="text" placeholder="Digite o sexo">
+          	</div>
+          <!-- /Final  -->
+            </div>
+		
+
+            
+	
+		
+		<button id="busca" class="btn btn-Warning col-md-offset-5">Buscar</button>
+		
+				
+		<table class="table table-bordered"> 
+			<caption>Animais</caption>
+				<thead>
+					<tr> 
+						<th>Especie</th>
+						<th>Nome</th> 
+						<th>Idade</th> 
+						<th>Cor</th> 
+						<th>Raça</th> 
+						<th>Sexo</th> 
+						<th>Descrição</th> 
+					</tr> 
+				</thead> 
+				
+				<tbody id="dadosAnimal"> 
+					
+				</tbody> 
+		</table>
+		
+  </body>
+  
+</html>

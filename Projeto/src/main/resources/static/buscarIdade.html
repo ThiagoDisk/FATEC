@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Busca por idade</title>
+	
+    
+	<script src="js/jquery.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	<link href="css/proj.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+
+			$("#busca").click(function() {
+				$("#dadosAnimal").empty();
+
+				var idade = $('#idade').val();	
+				alert(idade);
+					
+				var url = "/animal/buscaIdade/"+idade+"";
+			
+					
+
+				$.getJSON(url, function(data) {
+						
+						var itens = [];
+						
+						$.each(data, function(i){
+							itens.push("<tr> <td>"+ this.especie +"</td><td>"+ this.espc.nome + "</td><td>"+ this.espc.idade + "</td><td>"+ this.espc.cor + "</td><td>"+ this.espc.raca + "</td><td>"+ this.espc.sexo + "</td><td>"+ this.descricao +"</td></tr>");
+							
+							
+						});
+									
+						$("#dadosAnimal").append(itens);
+						
+				});
+
+			});
+
+		});
+
+	</script>
+
+   
+  </head>
+
+
+  <body>
+
+  <div class="fundo">
+  		<div  id="painelBusca">
+            
+			<div class="form-group col-md-2">
+         		 <label>Idade</label>
+				<input id="idade" class="input-large form-control" type="text" placeholder="Digite a idade">
+         	</div>
+        
+          <!-- /Final  -->
+            </div>
+		
+
+            
+	
+		
+		<button id="busca" class="btn btn-Warning col-md-offset-5">Buscar</button>
+		
+				
+		<table class="table table-bordered"> 
+			<caption>Animais</caption>
+				<thead>
+					<tr> 
+						<th>Especie</th>
+						<th>Nome</th> 
+						<th>Idade</th> 
+						<th>Cor</th> 
+						<th>Raça</th> 
+						<th>Sexo</th> 
+						<th>Descrição</th> 
+					</tr> 
+				</thead> 
+				
+				<tbody id="dadosAnimal"> 
+					
+				</tbody> 
+		</table>
+		</div>
+  </body>
+  
+</html>

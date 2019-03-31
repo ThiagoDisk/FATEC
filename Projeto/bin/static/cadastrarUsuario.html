@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adicione o animal para ser adotado</title>
+	<script src="js/jquery.js"></script>
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	<link href="css/proj.css" rel=stylesheet>
+	
+	<script>
+		$(document).ready(function()
+		{
+			$("#adicionar").click(function()
+			{
+				var username = $('#username').val();
+				alert(username);
+				var password = $('password').val();	
+				alert(password);
+				
+				$("#dadosUsuario").empty();	
+				var url = "/cadastro/"+username+"/"+password+"";
+				alert("Você foi cadastrado");		 
+				$.getJSON(url, function(data) 
+				{
+					
+					alert("Cadastrado com sucesso"");
+					
+				});
+			});	
+
+	});
+	</script>
+  </head>
+  <body>
+  <div class="fundo">
+  
+  		<div id="painelAdicionar">
+            
+			<div class="form-group col-md-2">
+         		 <label>Especies</label>
+				<input id="especie" class="input-large form-control" type="text" placeholder="Digite a especie">
+         	</div>
+         
+         	<div class="form-group col-md-2">
+               <label>Nome</label>
+       		 <input id="nome" class="input-large form-control" type="text" placeholder="Digite o nome">
+      		</div>
+      		
+      		<div class="form-group col-md-2">
+      	  		 <label>Idade</label>
+      		  <input id="idade" class="input-large form-control" type="text" placeholder="Digite a idade">
+       		</div>
+       		
+       		<div class="form-group col-md-2">
+      	  		 <label>Cor</label>
+       		 	<input id="cor" class="input-large form-control" type="text" placeholder="Digite a cor">
+       		</div>
+       		 
+       		 <div class="form-group col-md-2">
+      	  		 <label>Raça</label>
+       		 <input id="raca" class="input-large form-control" type="text" placeholder="Digite a raça">
+       		 </div>
+       		 
+       		 <div class="form-group col-md-2">
+       			 <label>Sexo</label>
+       			 <input id="sexo" class="input-large form-control" type="text" placeholder="Digite o sexo">
+          	</div>
+          	<div class="form-group col-md-2">
+       			 <label>Descrição</label>
+       			 <input id="descricao" class="input-large form-control" type="text" placeholder="Digite a descrição">
+          	</div>
+          <!-- /Final  -->
+            </div>
+          
+         <button id="adicionar" class="btn btn-success col-md-offset-5">Adicionar</button>
+         </div>
+  </body>
+</html>

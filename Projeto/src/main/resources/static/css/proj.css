@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,100');
+
+.fundo{
+	background:linear-gradient(to right, #04754a, #046275);
+	color: white;
+	font-family:'Roboto',sans-serif,Arial;
+	font-size:1.3em;
+	height:100vh;
+	
+}
+label{
+	font-weight:300;
+}
