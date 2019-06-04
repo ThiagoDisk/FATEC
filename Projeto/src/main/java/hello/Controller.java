@@ -16,16 +16,7 @@ public class Controller {
 	}
 	
 	
-	
-	public void buscarAnimal(){
-		get("/animal/buscaAnimal/:especie/:nome/:idade/:cor/:raca/:sexo", (req, res) -> {
-		
-			Especificacao espec = new Especificacao(req.params(":nome"), req.params(":idade"), req.params(":cor"),req.params(":raca"),req.params(":sexo"));	
-			List<Animal> animaisEncontrados = model.buscarEspecificacao(espec);	
-			return new Gson().toJson(animaisEncontrados);
-			
-		});
-	}
+
 	
 	
 	public void logar(){
@@ -78,11 +69,13 @@ public class Controller {
 		}
 			
 		public void addAnimal(){
-				get("/animal/addAnimal/:especie/:nome/:idade/:cor/:raca/:sexo/:descricao", (req, res) -> {
+				get("/animal/addAnimal/:especie/:descricao/:nome/:idade/:cor/:raca/:sexo", (req, res) -> {
 				    model.addAnimal(new Animal(req.params(":especie"),req.params(":descricao"),new Especificacao(req.params(":nome"), req.params(":idade"), req.params(":cor"), req.params(":raca"), req.params(":sexo"))));
 					return ("ok");
 			
 				});
+				
+				
 	}
 		public void addUsuario(){
 			get("/cadastro/:username/:senha", (req, res) -> {

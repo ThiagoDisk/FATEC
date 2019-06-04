@@ -11,22 +11,45 @@ public class Animal {
 		this.especie = especie;
 		this.espc = espc;
 		this.descricao = descricao;
-		
+
 	}
-	
-	public String getEspecie(){
-		return this.especie;
+
+
+
+	public String getEspecie() {
+		return especie;
 	}
-	
-	public Especificacao getEspc(){
+
+
+
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+
+
+
+	public Especificacao getEspc() {
 		return espc;
 	}
-	
-	public String getDescricao(){
+
+
+
+	public void setEspc(Especificacao espc) {
+		this.espc = espc;
+	}
+
+
+
+	public String getDescricao() {
 		return descricao;
 	}
 
 
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	
 	
 	
 	

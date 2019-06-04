@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+div.a {
+  text-align: center;
+}
+p1 {
+  font-size: 40px;
+
+}
+
+</STYLE>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <script src="js/jquery.js"></script>
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	<link href="css/proj.css" rel=stylesheet>
+	
+	
+    
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			$('form').submit(function(e){    
+				
+				e.preventDefault();
+				
+				var username = $('#username').val().trim();
+				var password = $('#password').val().trim();
+				
+				$.getJSON("/login/"+username+"/"+password+"?format=json&jsoncallback=",function(data) {
+					
+					if(data.user != undefined){
+						window.location.href = '/adicionarAnimal.html';
+						
+					}
+					
+					
+					
+				});
+			});
+		});
+	</script>
+
+   
+  </head>
+  <body  background="https://besthqwallpapers.com/Temp/1-6-2019/beautiful-cat-with-blue-eyes-exotic-shorthair-cat-beautiful-eyes-pets-cats-besthqwallpapers.com-1366x768.jpg">>
+
+		<br>
+		<br>
+		<div class="a">
+		<p1 style = "font-family:georgia,garmond,serif,font-size:40px;font-style:italic;"> Escolha uma opção:	</p1>
+		</div>
+
+		
+		<a class='btn btn-info col-md-offset-4 col-md-4' role='button' href='/adicionarAnimal.html'>Adicionar Animal</a>
+		<br><br>
+		<a class='btn btn-info col-md-offset-4 col-md-4' role='button' href='/buscarEspecie.html'>Buscar por Especie</a>
+		<br><br>
+		<a class='btn btn-info col-md-offset-4 col-md-4' role='button' href='/buscarIdade.html'>Buscar por Idade</a>
+		<br><br>
+		<a class='btn btn-info col-md-offset-4 col-md-4' role='button' href='/buscarRaca.html'>Buscar por Raça</a>
+		<br><br>
+		<a class='btn btn-info col-md-offset-4 col-md-4' role='button' href='/buscarSexo.html'>Buscar por Sexo</a>
+
+		
+	
+  </body>
+</html>

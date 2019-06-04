@@ -13,27 +13,28 @@
 			$("#adicionar").click(function()
 			{
 				var especie = $('#especie').val();
-				alert(especie);
+				
 				var nome = $('#nome').val();	
-				alert(nome);
+				
 				var idade = $('#idade').val();	
-				alert(idade);
+			
 				var cor = $('#cor').val();	
-				alert(cor);
+				
 				var raca = $('#raca').val();	
-				alert(raca);
+				
 				var sexo = $('#sexo').val();
-				alert(sexo);
+				
 				var descricao = $('#descricao').val();
-				alert(descricao);
+				
+		
 				
 				$("#dadosAnimal").empty();	
-				var url = "/animal/addAnimal/"+especie+"/"+nome+"/"+idade+"/"+cor+"/"+raca+"/"+sexo+"/"+descricao+"";
+				
+				var url = "/animal/addAnimal/"+especie+"/"+descricao+"/"+nome+"/"+idade+"/"+cor+"/"+raca+"/"+sexo+"";
 				alert("Animal adicionado ao banco de adoção!");		 
-				$.getJSON(url, function(data) 
+				$.getJSON(url, data, function(data) 
 				{
 					
-					alert("Animal adicionado ao banco de adoção!");
 					
 				});
 			});	
@@ -41,48 +42,51 @@
 	});
 	</script>
   </head>
-  <body>
-  <div class="fundo">
+  <body background="https://besthqwallpapers.com/Temp/1-6-2019/raccoon-bokeh-wildlife-funny-animals-raccoon-in-forest-besthqwallpapers.com-1366x768.jpg">>
+  
+  
   
   		<div id="painelAdicionar">
             
 			<div class="form-group col-md-2">
-         		 <label>Especies</label>
+         		 <label><font color = white>Especies</font></label>
 				<input id="especie" class="input-large form-control" type="text" placeholder="Digite a especie">
          	</div>
          
          	<div class="form-group col-md-2">
-               <label>Nome</label>
+               <label><font color = white> Nome</font></label>
        		 <input id="nome" class="input-large form-control" type="text" placeholder="Digite o nome">
       		</div>
       		
       		<div class="form-group col-md-2">
-      	  		 <label>Idade</label>
+      	  		 <label><font color = white>Idade</font></label>
       		  <input id="idade" class="input-large form-control" type="text" placeholder="Digite a idade">
        		</div>
        		
        		<div class="form-group col-md-2">
-      	  		 <label>Cor</label>
+      	  		 <label><font color = white>Cor</font></label>
        		 	<input id="cor" class="input-large form-control" type="text" placeholder="Digite a cor">
        		</div>
        		 
        		 <div class="form-group col-md-2">
-      	  		 <label>Raça</label>
+      	  		 <label><font color = white>Raça</font></label>
        		 <input id="raca" class="input-large form-control" type="text" placeholder="Digite a raça">
        		 </div>
        		 
        		 <div class="form-group col-md-2">
-       			 <label>Sexo</label>
+       			 <label><font color = white>Sexo</font></label>
        			 <input id="sexo" class="input-large form-control" type="text" placeholder="Digite o sexo">
           	</div>
           	<div class="form-group col-md-2">
-       			 <label>Descrição</label>
+       			 <label><font color = white>Descrição</font></label>
        			 <input id="descricao" class="input-large form-control" type="text" placeholder="Digite a descrição">
           	</div>
-          <!-- /Final  -->
-            </div>
-          
-         <button id="adicionar" class="btn btn-success col-md-offset-5">Adicionar</button>
+   
+         <button id="adicionar" class="btn btn-success pull-right col-md-offset-4 col-md-4">Adicionar</button>
+
+   
          </div>
+         <br><br>
+      <a class='btn btn-info pull-right  col-md-offset-4 col-md-4' role='button' href='/menu.html'>Voltar ao menu</a>   
   </body>
 </html>

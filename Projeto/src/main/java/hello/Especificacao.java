@@ -8,6 +8,7 @@ public class Especificacao {
 	private String cor;
 	private String raca;
 	private String sexo;
+	
 
 	
 	
@@ -17,7 +18,7 @@ public class Especificacao {
 		this.cor = cor;
 		this.raca = raca;
 		this.sexo = sexo; 
-		
+
 	}
 
 	public String getNome() {
@@ -59,9 +60,7 @@ public class Especificacao {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-
 	
-
 
 	//delegacao da comparacao de marca, modelo e cor do carro para a classe Especificacao, pois ela eh a dona dos atributos
 	public boolean comparar(Especificacao esp){
@@ -71,5 +70,7 @@ public class Especificacao {
 			return false;
 		}
 	}
+
+
 	
 }

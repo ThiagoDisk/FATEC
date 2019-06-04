@@ -19,7 +19,7 @@
 				$("#dadosAnimal").empty();
 
 				var especie = $('#especie').val();	
-				alert(especie);
+		
 					
 				var url = "/animal/buscaEspecie/"+especie+"";
 			
@@ -49,37 +49,40 @@
   </head>
 
 
-  <body>
-  <div class="fundo">
+  <body background = "https://besthqwallpapers.com/Temp/4-6-2019/rabbits-family-cute-animals-bunny-on-a-white-background-easter-besthqwallpapers.com-1366x768.jpg">
+ 
 
   		<div  id="painelBusca">
             
 			<div class="form-group col-md-2">
-         		 <label>Especies</label>
+         		 <label><font color = black>Especies</font></label>
 				<input id="especie" class="input-large form-control" type="text" placeholder="Digite a especie">
          	</div>
         
           <!-- /Final  -->
-            </div>
+           
 		
 
             
 	
 		
-		<button id="busca" class="btn btn-success col-md-offset-5">Buscar</button>
-		
+		<button id="busca" class="btn btn-success pull-right col-md-offset-4 col-md-4">Buscar</button>
+		<br><br>
+		   <a class='btn btn-info pull-right  col-md-offset-4 col-md-4' role='button' href='/menu.html'>Voltar ao menu</a> 
 				
 		<table class="table table-bordered"> 
 			<caption>Animais</caption>
 				<thead>
 					<tr> 
-						<th>Especie</th>
-						<th>Nome</th> 
-						<th>Idade</th> 
-						<th>Cor</th> 
-						<th>Raça</th> 
-						<th>Sexo</th> 
-						<th>Descrição</th> 
+						<td class="table-active">Especie</td>
+						<td class="table-default">Nome</td> 
+						<td class="table-primary">Idade</td> 
+						<td class="table-secondary">Cor</td> 
+						<td class="table-success">Raça</td> 
+						<td class="table-danger">Sexo</td> 
+						<td class="table-info">Descrição</td> 
+ 
+				
 					</tr> 
 				</thead> 
 				

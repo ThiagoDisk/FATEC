@@ -19,7 +19,7 @@
 				$("#dadosAnimal").empty();
 
 				var sexo = $('#sexo').val();	
-				alert(sexo);
+			
 					
 				var url = "/animal/buscaSexo/"+sexo+"";
 			
@@ -37,10 +37,7 @@
 									
 						$("#dadosAnimal").append(itens);
 						
-						caption {
-								color:white
-							}
-						
+
 				});
 
 			});
@@ -53,38 +50,36 @@
   </head>
 
 
-  <body>
-  <div class="fundo">
+  <body background = "https://besthqwallpapers.com/Temp/4-6-2019/cute-kittens-friends-cute-animals-pets-cats-besthqwallpapers.com-1366x768.jpg">
+  
 
   		<div  id="painelBusca">
             
 			<div class="form-group col-md-2">
-         		 <label>Sexo</label>
+         		 <label><font color = black>Sexo</font></label>
 				<input id="sexo" class="input-large form-control" type="text" placeholder="Digite o sexo">
          	</div>
-         	
-        
-          <!-- /Final  -->
-            </div>
-		
+            
+      
 
             
-	
-		
-		<button id="busca" class="btn btn-Warning col-md-offset-5">Buscar</button>
+		<button id="busca" class="btn btn-Warning pull-right  col-md-offset-4 col-md-4">Buscar</button>
+		<br><br>
+		<a class='btn btn-info pull-right  col-md-offset-4 col-md-4' role='button' href='/menu.html'>Voltar ao menu</a> 
+  
 		
 				
 		<table class="table table-bordered"> 
 			<caption>Animais</caption>
 				<thead>
 					<tr> 
-						<th>Especie</th>
-						<th>Nome</th> 
-						<th>Idade</th> 
-						<th>Cor</th> 
-						<th>Raça</th> 
-						<th>Sexo</th> 
-						<th>Descrição</th> 
+						<th><font color = black>Especie</font></th>
+						<th><font color = black>Nome</font></th> 
+						<th><font color = black>Idade</font></th> 
+						<th><font color = black>Cor</font></th> 
+						<th><font color = black>Raça</font></th> 
+						<th><font color = black>Sexo</font></th> 
+						<th><font color = black>Descrição</font></th>  
 					</tr> 
 				</thead> 
 				

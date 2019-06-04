@@ -4,7 +4,7 @@ import static spark.Spark.*;
 
 
 public class MainServer {
-	
+
 	final static Model model = new Model();
 	
     public static void main(String[] args) {
@@ -25,8 +25,7 @@ public class MainServer {
 		inicializarAnimais();
 
 		Controller controller = new Controller(model);
-	
-		controller.buscarAnimal();
+
 		controller.buscarAnimalEspecie();
 		controller.buscarAnimalIdade();
 		controller.buscarAnimalRaca();
@@ -39,7 +38,7 @@ public class MainServer {
     public static void inicializarAnimais(){
     	
     	model.addUsuario(new Usuario("giovanna", "12345"));
-    	model.addAnimal(new Animal("Macaco","Fofinho e serelepe", new Especificacao("George", "5", "Marrom","Bonobo","Macho")));
+    	//model.addAnimal(new Animal("Macaco","Fofinho e serelepe", new Especificacao("George", "5", "Marrom","Bonobo","Macho","nada")));
 
     }
 }

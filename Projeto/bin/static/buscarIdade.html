@@ -20,7 +20,7 @@
 				$("#dadosAnimal").empty();
 
 				var idade = $('#idade').val();	
-				alert(idade);
+				
 					
 				var url = "/animal/buscaIdade/"+idade+"";
 			
@@ -50,37 +50,39 @@
   </head>
 
 
-  <body>
+  <body background = "https://c.wallhere.com/photos/44/c4/parrot_cage_sit_crest_coat-708569.jpg!d">
 
-  <div class="fundo">
+
   		<div  id="painelBusca">
             
 			<div class="form-group col-md-2">
-         		 <label>Idade</label>
+         		 <label><font color = white>Idade</font></label>
 				<input id="idade" class="input-large form-control" type="text" placeholder="Digite a idade">
+				
          	</div>
         
-          <!-- /Final  -->
-            </div>
+         
 		
 
             
 	
 		
-		<button id="busca" class="btn btn-Warning col-md-offset-5">Buscar</button>
+		<button id="busca" class="btn btn-success pull-right col-md-offset-4 col-md-4">Buscar</button>
+		<br><br>
+		<a class='btn btn-info pull-right  col-md-offset-4 col-md-4' role='button' href='/menu.html'>Voltar ao menu</a> 
 		
 				
 		<table class="table table-bordered"> 
 			<caption>Animais</caption>
 				<thead>
 					<tr> 
-						<th>Especie</th>
-						<th>Nome</th> 
-						<th>Idade</th> 
-						<th>Cor</th> 
-						<th>Raça</th> 
-						<th>Sexo</th> 
-						<th>Descrição</th> 
+						<th><font color = white>Especie</font></th>
+						<th><font color = white>Nome</font></th> 
+						<th><font color = white>Idade</font></th> 
+						<th><font color = white>Cor</font></th> 
+						<th><font color = white>Raça</font></th> 
+						<th><font color = white>Sexo</font></th> 
+						<th><font color = white>Descrição</font></th> 
 					</tr> 
 				</thead> 
 				

@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <style>
+div.a {
+  text-align: center;
+}
+div.b {
+  text-align: center;
+}
+p1 {
+  font-size: 40px;
+}
+p2{
+   font-size: 18px;
+}
+
+</STYLE>
     <meta charset="utf-8">
     <title>Login</title>
+    <script src="js/jquery.js"></script>
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	<link href="css/proj.css" rel=stylesheet>
+	
 	
     
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -23,7 +42,7 @@
 				$.getJSON("/login/"+username+"/"+password+"?format=json&jsoncallback=",function(data) {
 					
 					if(data.user != undefined){
-						window.location.href = '/adicionarAnimal.html';
+						window.location.href = '/menu.html';
 						
 					}
 					
@@ -36,20 +55,28 @@
 
    
   </head>
-  <body>
+  <body  background="https://besthqwallpapers.com/Temp/1-6-2019/akita-inu-garden-pets-dogs-cute-animals-besthqwallpapers.com-1366x768.jpg">>
+
 		<br>
 		<br>
+		<div class="a">
+		<p1 style = "font-family:georgia,garmond,serif,font-size:40px;font-style:italic;"> Adote um amiguinho	</p1>
+			</div>
+		<div class='b'>
+		<p2 style = "font-family:georgia,garmond,serif,font-size:40px;font-style:italic;"> Faça o login ou cadastre-se	</p2>
+		</div>	
+
 		<form class="form-horizontal" method="post" id="form">
 			<div class="form-group">
 				<label for="inputEmail3" class="col-md-4 control-label">Username</label>
 				<div class="col-md-4">
-					<input required="required" type="" class="form-control" id="username" placeholder="Email">
+					<input required="required" type="" class="form-control" id="username" placeholder="Nome de Usuario">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputPassword3" class="col-md-4 control-label">Senha</label>
 				<div class="col-md-4">
-					<input required="required" type="password" class="form-control" id="password" placeholder="Password">
+					<input required="required" type="password" class="form-control" id="password" placeholder="Senha">
 				</div>
 			</div>
 			
@@ -61,7 +88,6 @@
 		<a class='btn btn-info col-md-offset-4 col-md-4' role='button' href='/cadastrarUsuario.html'>Cadastrar</a>
 
 		
-
 	
   </body>
 </html>

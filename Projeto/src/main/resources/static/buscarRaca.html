@@ -19,7 +19,7 @@
 				$("#dadosAnimal").empty();
 
 				var raca = $('#raca').val();	
-				alert(raca);
+				
 					
 				var url = "/animal/buscarRaca/"+raca+"";
 			
@@ -49,37 +49,35 @@
   </head>
 
 
-  <body>
-  <div class="fundo">
+  <body background = "https://besthqwallpapers.com/Temp/4-6-2019/corgi-puppy-pets-welsh-corgi-dogs-besthqwallpapers.com-1366x768.jpg">
+  
 
   		<div  id="painelBusca">
             
 			<div class="form-group col-md-2">
-         		 <label>Raca</label>
+         		 <label><font color = white>Raca</font></label>
 				<input id="raca" class="input-large form-control" type="text" placeholder="Digite a raça">
          	</div>
-        
-          <!-- /Final  -->
-            </div>
-		
+
 
             
 	
 		
-		<button id="busca" class="btn btn-Warning col-md-offset-5">Buscar</button>
-		
+		<button id="busca" class="btn btn-Warning pull-right  col-md-offset-4 col-md-4">Buscar</button>
+		<br><br>
+		<a class='btn btn-info pull-right  col-md-offset-4 col-md-4' role='button' href='/menu.html'>Voltar ao menu</a> 
 				
 		<table class="table table-bordered"> 
 			<caption>Animais</caption>
 				<thead>
 					<tr> 
-						<th>Especie</th>
-						<th>Nome</th> 
-						<th>Idade</th> 
-						<th>Cor</th> 
-						<th>Raça</th> 
-						<th>Sexo</th> 
-						<th>Descrição</th> 
+						<th><font color = white>Especie</font></th>
+						<th><font color = white>Nome</font></th> 
+						<th><font color = white>Idade</font></th> 
+						<th><font color = white>Cor</font></th> 
+						<th><font color = white>Raça</font></th> 
+						<th><font color = white>Sexo</font></th> 
+						<th><font color = white>Descrição</font></th>  
 					</tr> 
 				</thead> 
 				

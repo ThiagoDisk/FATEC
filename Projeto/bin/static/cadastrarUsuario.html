@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Adicione o animal para ser adotado</title>
+    <title>Faça o seu cadastro aqui</title>
 	<script src="js/jquery.js"></script>
 	<link href="css/bootstrap.min.css" rel=stylesheet>
 	<link href="css/proj.css" rel=stylesheet>
@@ -14,16 +14,16 @@
 			{
 				var username = $('#username').val();
 				alert(username);
-				var password = $('password').val();	
+				var password = $('#password').val();	
 				alert(password);
 				
 				$("#dadosUsuario").empty();	
-				var url = "/cadastro/"+username+"/"+password+"";
-				alert("Você foi cadastrado");		 
+				var url = "/cadastro/"+username+"/"+password+"";	
+				alert("Você foi cadastrado com sucesso. Clique em Continuar para adicionar o animal.");
 				$.getJSON(url, function(data) 
 				{
 					
-					alert("Cadastrado com sucesso"");
+					alert("Cadastrado com sucesso");
 					
 				});
 			});	
@@ -31,48 +31,26 @@
 	});
 	</script>
   </head>
-  <body>
-  <div class="fundo">
+  <body background = "https://images6.alphacoders.com/310/thumb-1920-310400.jpg">
   
   		<div id="painelAdicionar">
             
 			<div class="form-group col-md-2">
-         		 <label>Especies</label>
-				<input id="especie" class="input-large form-control" type="text" placeholder="Digite a especie">
+         		 <label><font color = white>Usuario</font></label>
+				<input id="username" class="input-large form-control" type="text" placeholder="Digite o nome de usuario">
          	</div>
          
          	<div class="form-group col-md-2">
-               <label>Nome</label>
-       		 <input id="nome" class="input-large form-control" type="text" placeholder="Digite o nome">
+               <label><font color = white>Senha</font></label>
+       		 <input id="password" class="input-large form-control" type="text" placeholder="Digite a senha">
       		</div>
-      		
-      		<div class="form-group col-md-2">
-      	  		 <label>Idade</label>
-      		  <input id="idade" class="input-large form-control" type="text" placeholder="Digite a idade">
-       		</div>
-       		
-       		<div class="form-group col-md-2">
-      	  		 <label>Cor</label>
-       		 	<input id="cor" class="input-large form-control" type="text" placeholder="Digite a cor">
-       		</div>
-       		 
-       		 <div class="form-group col-md-2">
-      	  		 <label>Raça</label>
-       		 <input id="raca" class="input-large form-control" type="text" placeholder="Digite a raça">
-       		 </div>
-       		 
-       		 <div class="form-group col-md-2">
-       			 <label>Sexo</label>
-       			 <input id="sexo" class="input-large form-control" type="text" placeholder="Digite o sexo">
-          	</div>
-          	<div class="form-group col-md-2">
-       			 <label>Descrição</label>
-       			 <input id="descricao" class="input-large form-control" type="text" placeholder="Digite a descrição">
-          	</div>
-          <!-- /Final  -->
-            </div>
+         
+         <button id="adicionar" class="btn btn-success pull-right  col-md-offset-4 col-md-4">Adicionar</button>
+         <br><br>
+         
+          <a class='btn btn-info pull-right  col-md-offset-4 col-md-4' role='button' href='/menu.html'>Ir para o menu</a> 
+  
           
-         <button id="adicionar" class="btn btn-success col-md-offset-5">Adicionar</button>
          </div>
   </body>
 </html>
